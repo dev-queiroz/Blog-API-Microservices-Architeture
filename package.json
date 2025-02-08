@@ -1,22 +1,32 @@
 {
-  "name": "blog-platform",
-  "version": "0.1.0",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
+  "name": "marketplace-completo",
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "build": "lerna run build",
-    "test": "lerna run test",
-    "start": "lerna run start"
+    "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "dev": "nodemon src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-queiroz/Blog-API-Microservices-Architeture.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-queiroz/Blog-API-Microservices-Architeture/issues"
+  },
+  "homepage": "https://github.com/dev-queiroz/Blog-API-Microservices-Architeture#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemailer": "^6.10.0",
+    "uuidv4": "^6.2.13"
   },
   "devDependencies": {
-    "@types/swagger-jsdoc": "^6.0.4",
-    "@types/swagger-ui-express": "^4.1.7",
-    "lerna": "^7.0.0"
-  },
-  "dependencies": {
-    "swagger-jsdoc": "^6.2.8",
-    "swagger-ui-express": "^5.0.1"
+    "@types/express": "^5.0.0",
+    "@types/nodemailer": "^6.4.17",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
   }
 }
